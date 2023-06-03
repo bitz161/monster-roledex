@@ -1,8 +1,14 @@
+import Card from "../card/card.component";
 import "./cardlist.style.scss";
 
 const CardList = ({ monsters }) => {
-  console.log(monsters);
-  return <div>Working</div>;
+  return (
+    <div className="card-list">
+      {monsters.map((monster) => {
+        return <Card monster={monster} />;
+      })}
+    </div>
+  );
 };
 
 export default CardList;
